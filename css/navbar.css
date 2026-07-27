@@ -1,0 +1,319 @@
+/* ==========================================
+                NAVBAR
+========================================== */
+
+header{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1200px, 90%);
+    z-index: 1000;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 28px;
+
+    background: rgba(17,24,39,.70);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 50px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+
+    position: relative;
+}
+
+/* ==========================================
+                    LOGO
+========================================== */
+
+.logo{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo span{
+    color: var(--primary);
+}
+
+/* ==========================================
+                NAV LINKS
+========================================== */
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color: var(--gray);
+    font-weight: 500;
+    position: relative;
+    transition: .35s;
+}
+
+.nav-links a:hover{
+    color: var(--white);
+}
+
+.nav-links a::after{
+
+    content:"";
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.35s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+}
+
+.nav-links a.active{
+
+    color:var(--primary);
+}
+
+/* ==========================================
+                NAV ACTIONS
+========================================== */
+
+.nav-actions{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* ==========================================
+                THEME BUTTON
+========================================== */
+
+.theme-btn{
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    outline:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:rgba(255,255,255,.08);
+
+    transition:.35s;
+}
+
+.theme-btn:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-3px);
+}
+
+/* ==========================================
+                RESUME BUTTON
+========================================== */
+
+.resume-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary));
+
+    transition:.35s;
+
+    white-space:nowrap;
+}
+
+.resume-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 28px rgba(59,130,246,.35);
+}
+
+/* ==========================================
+            HAMBURGER MENU
+========================================== */
+
+#menu-toggle{
+
+    display:none;
+
+    font-size:25px;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+#menu-toggle:hover{
+
+    color:var(--primary);
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media(max-width:992px){
+
+    .nav-links{
+
+        gap:22px;
+
+    }
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+header{
+
+    width:95%;
+    top:15px;
+
+}
+
+nav{
+
+    padding:15px 20px;
+
+}
+
+.resume-btn{
+
+    display:none;
+
+}
+
+#menu-toggle{
+
+    display:block;
+
+}
+
+.nav-links{
+
+    position:absolute;
+
+    top:75px;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:25px;
+
+    background:#111827;
+
+    border-radius:20px;
+
+    box-sizing:border-box;
+
+    transform:translateY(-20px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:.35s;
+}
+
+.nav-links.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+    transform:translateY(0);
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.logo{
+
+    font-size:1.45rem;
+
+}
+
+.theme-btn{
+
+    width:42px;
+    height:42px;
+
+}
+
+nav{
+
+    padding:14px 18px;
+
+}
+
+}

@@ -1,0 +1,349 @@
+/* ==========================================
+                PROJECTS
+========================================== */
+
+.projects{
+    padding:120px 0;
+}
+
+.projects-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:35px;
+
+    margin-top:60px;
+
+}
+
+/* ==========================================
+                PROJECT CARD
+========================================== */
+
+.project-card{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(18px);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 20px 40px rgba(59,130,246,.18);
+
+}
+
+/* ==========================================
+                PROJECT IMAGE
+========================================== */
+
+.project-image{
+
+    height:260px;
+
+    padding:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #0B1220,
+        #101A2E
+    );
+
+}
+
+.project-image img{
+
+    width:100%;
+
+    max-width:100%;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.35);
+
+    transition:.35s;
+
+}
+
+.project-card:hover .project-image img{
+
+    transform:scale(1.04);
+
+}
+
+/* ==========================================
+            PROJECT CONTENT
+========================================== */
+
+.project-content{
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.project-content h3{
+
+    font-size:1.45rem;
+
+    margin-bottom:15px;
+
+}
+
+.project-content p{
+
+    color:var(--gray);
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+    flex:1;
+
+}
+
+/* ==========================================
+                TECH STACK
+========================================== */
+
+.tech-stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+.tech-stack span{
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:.85rem;
+
+    background:rgba(59,130,246,.12);
+
+    border:1px solid rgba(59,130,246,.2);
+
+}
+
+/* ==========================================
+            PROJECT BUTTONS
+========================================== */
+
+.project-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.project-btn{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:12px;
+
+    border-radius:40px;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.github-btn{
+
+    background:#1f2937;
+
+}
+
+.live-btn{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+.project-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================================
+                TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.projects{
+
+    padding:100px 0;
+
+}
+
+.projects-grid{
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.project-image{
+
+    height:240px;
+
+}
+
+}
+
+/* ==========================================
+                MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.projects-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.project-image{
+
+    height:220px;
+
+}
+
+.project-content{
+
+    padding:22px;
+
+}
+
+.project-content h3{
+
+    font-size:1.3rem;
+
+}
+
+.project-buttons{
+
+    flex-direction:column;
+
+}
+
+.project-btn{
+
+    width:100%;
+
+}
+
+}
+
+/* ==========================================
+            SMALL MOBILE
+========================================== */
+
+@media(max-width:480px){
+
+.projects{
+
+    padding:80px 0;
+
+}
+
+.project-image{
+
+    height:190px;
+
+    padding:14px;
+
+}
+
+.project-content{
+
+    padding:18px;
+
+}
+
+.project-content h3{
+
+    font-size:1.2rem;
+
+}
+
+.tech-stack{
+
+    gap:8px;
+
+}
+
+.tech-stack span{
+
+    font-size:.8rem;
+
+    padding:6px 12px;
+
+}
+
+}

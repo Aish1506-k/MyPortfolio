@@ -1,0 +1,295 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   CSS VARIABLES
+=========================== */
+
+:root{
+
+    --bg-color:#070B17;
+    --card-color:#111827;
+
+    --primary:#3B82F6;
+    --secondary:#8B5CF6;
+
+    --white:#F8FAFC;
+    --gray:#94A3B8;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+}
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ===========================
+   HTML
+=========================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ===========================
+   BODY
+=========================== */
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--bg-color);
+
+    color:var(--white);
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+/* ===========================
+   LIST
+=========================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+    height:auto;
+
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+
+    padding:100px 0;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary));
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(59,130,246,.35);
+
+}
+
+.btn-outline{
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+}
+.btn:hover{
+
+transform:translateY(-6px) scale(1.03);
+
+box-shadow:0 15px 40px rgba(59,130,246,.35);
+
+}
+
+/* ==========================================
+            GRID OVERLAY
+========================================== */
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+
+linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+
+background-size:50px 50px;
+
+pointer-events:none;
+
+z-index:-95;
+
+}
+
+/* ===========================
+        LIGHT THEME
+=========================== */
+
+body.light{
+
+background:#f4f8fc;
+
+color:#111827;
+
+}
+
+body.light .project-card,
+body.light .skill-card,
+body.light .about-card,
+body.light .timeline-card,
+body.light .contact-info,
+body.light .contact-form,
+body.light .stat-card{
+
+background:white;
+
+color:#111827;
+
+}
+
+body.light nav{
+
+background:rgba(255,255,255,.9);
+
+}
+
+body.light .nav-links a{
+
+color:#111827;
+
+}
+
+body.light .hero-description,
+body.light .section-subtitle,
+body.light p{
+
+color:#4b5563;
+
+}
+/* ===========================
+        TOP BUTTON
+=========================== */
+
+#topBtn{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:55px;
+
+height:55px;
+
+border:none;
+
+border-radius:50%;
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--secondary));
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+display:none;
+
+z-index:999;
+
+transition:.35s;
+
+}
+
+#topBtn:hover{
+
+transform:translateY(-6px);
+
+}
