@@ -15,8 +15,13 @@
 
 .footer-logo h3{
     color:#fff;
-    font-size:2rem;
+    font-size:clamp(1.4rem,3vw,1.7rem);
     font-weight:700;
+    letter-spacing:1px;
+}
+
+.footer-logo h3 span{
+    color:var(--primary);
 }
 
 .footer-links{

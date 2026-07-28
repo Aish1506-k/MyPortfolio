@@ -5,7 +5,9 @@
 @media (max-width: 992px){
 
 .container{
-    width:90%;
+
+    width:min(1200px,92%);
+
 }
 
 .hero .container{
@@ -34,10 +36,6 @@
     height:420px;
 }
 
-.tech-badge{
-    display:none;
-}
-
 .hero-title{
     font-size:3.3rem;
 }
@@ -55,7 +53,8 @@
 }
 
 .about-container{
-    flex-direction:column;
+    .about-container{grid-template-columns:1fr;
+}
 }
 
 .contact-container{
@@ -80,23 +79,7 @@ nav{
     padding:15px 20px;
 }
 
-.nav-links{
-    position:fixed;
-    top:80px;
-    left:-100%;
-    width:250px;
-    height:100vh;
-    background:#0f172a;
-    flex-direction:column;
-    padding:40px 25px;
-    gap:25px;
-    transition:.4s;
-    z-index:999;
-}
 
-.nav-links.active{
-    left:0;
-}
 
 .resume-btn{
     display:none;
@@ -117,8 +100,11 @@ nav{
 }
 
 .image-wrapper{
-    width:230px;
-    height:230px;
+
+    width:min(230px,80vw);
+
+    aspect-ratio:1/1;
+
 }
 
 .hero-image::before{
@@ -148,7 +134,7 @@ nav{
 }
 
 .hero-buttons .btn{
-    width:220px;
+   width:min(240px,100%);
 }
 
 .social-icons{
@@ -178,15 +164,18 @@ section{
 }
 
 .project-image{
+
+    min-height:180px;
+
     height:220px;
+
 }
 
 /* About */
 
 .about-container{
-    flex-direction:column;
+    grid-template-columns:1fr;
 }
-
 /* Experience */
 
 .timeline::before{
@@ -221,7 +210,7 @@ section{
 @media (max-width:480px){
 
 .container{
-    width:92%;
+    width:94%;
 }
 
 .hero-title{
@@ -233,8 +222,9 @@ section{
 }
 
 .image-wrapper{
-    width:190px;
-    height:190px;
+    width:min(190px,75vw);
+
+    aspect-ratio:1/1;
 }
 
 .hero-image::before{
@@ -253,5 +243,39 @@ section{
 .project-image{
     height:190px;
 }
+
+}
+/* ==========================================
+        OVERFLOW FIX
+========================================== */
+
+html,
+body{
+
+    overflow-x:hidden;
+
+}
+
+section{
+
+    overflow-x:hidden;
+
+}
+
+.container{
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+}
+
+*{
+
+    max-width:100%;
 
 }

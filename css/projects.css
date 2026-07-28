@@ -60,7 +60,11 @@
 
 .project-image{
 
+    min-height:220px;
+
     height:260px;
+
+    aspect-ratio:16/10;
 
     padding:18px;
 
@@ -139,8 +143,10 @@
     margin-bottom:20px;
 
     flex:1;
+    
+    overflow-wrap:break-word;
 
-}
+}  
 
 /* ==========================================
                 TECH STACK
@@ -182,6 +188,8 @@
 
     gap:15px;
 
+    flex-wrap:wrap;
+
 }
 
 .project-btn{
@@ -198,11 +206,13 @@
 
     border-radius:40px;
 
-    color:white;
+    color:var(--btn-text);
 
     font-weight:600;
 
     transition:.35s;
+
+    
 
 }
 
@@ -329,6 +339,23 @@
 .project-content h3{
 
     font-size:1.2rem;
+
+}
+.project-card{
+
+    width:100%;
+
+}
+
+.project-image{
+
+    min-height:170px;
+
+}
+
+.project-buttons{
+
+    width:100%;
 
 }
 

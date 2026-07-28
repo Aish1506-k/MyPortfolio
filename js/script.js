@@ -7,6 +7,14 @@ menu.addEventListener("click", () => {
     nav.classList.toggle("active");
 });
 
+/* Close mobile menu when a link is tapped */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
+    });
+});
+
 /* Back To Top */
 
 const topBtn=document.getElementById("topBtn");

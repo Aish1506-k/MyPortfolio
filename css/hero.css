@@ -7,8 +7,7 @@
     display:flex;
     align-items:center;
     padding:120px 0 80px;
-    overflow:clip;
-    overflow:hidden;
+    overflow:visible;
 }
 
 .hero .container{
@@ -16,6 +15,8 @@
     align-items:center;
     justify-content:space-between;
     gap:70px;
+
+    flex-wrap:wrap;
 }
 
 /* ==========================================
@@ -34,7 +35,7 @@
 }
 
 .hero-title{
-    font-size:4.2rem;
+    font-size:clamp(2.2rem,6vw,4.2rem);
     font-weight:800;
     line-height:1.1;
     margin-bottom:15px;
@@ -45,7 +46,7 @@
 }
 
 .hero-role{
-    font-size:2rem;
+    font-size:clamp(1.2rem,3vw,2rem);
     color:var(--primary);
     margin-bottom:25px;
     min-height:48px;
@@ -127,8 +128,8 @@
 
     position:absolute;
 
-    width:430px;
-    height:430px;
+    width:min(430px,85vw);
+    height:min(430px,85vw);
 
     border-radius:50%;
 
@@ -149,8 +150,9 @@
 
 .image-wrapper{
 
-    width:380px;
-    height:380px;
+
+    width:min(380px,90vw);
+    aspect-ratio:1/1;
 
     border-radius:50%;
 
@@ -358,11 +360,11 @@
 
 }
 
-.tech-badge{
+/* .tech-badge{
 
     display:none;
 
-}
+} */
 
 .hero-title{
 
@@ -432,15 +434,91 @@
 
 .hero-buttons{
 
+    display:flex;
+
     flex-direction:column;
 
     align-items:center;
+
+    width:100%;
+
+    gap:15px;
 
 }
 
 .hero-buttons .btn{
 
-    width:230px;
+    width:min(260px,100%);
+
+}
+.tech-badge{
+
+    display:flex;
+
+    padding:8px 12px;
+
+    font-size:12px;
+
+    gap:6px;
+
+    border-radius:12px;
+
+}
+
+.tech-badge i{
+
+    font-size:14px;
+
+}
+
+.html{
+
+    top:10px;
+
+    left:-8px;
+
+}
+
+.css{
+
+    top:70px;
+
+    left:-18px;
+
+}
+
+.js{
+
+    top:10px;
+
+    right:-8px;
+
+}
+
+.java{
+
+    top:70px;
+    bottom:auto;
+
+    right:-18px;
+
+}
+
+.python{
+
+    bottom:55px;
+
+    left:-15px;
+
+}
+
+.ai{
+
+    bottom:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
 
 }
 
@@ -466,8 +544,8 @@
 
 .image-wrapper{
 
-    width:200px;
-    height:200px;
+    width:220px;
+    height:220px;
 
 }
 
@@ -483,6 +561,25 @@
     width:100%;
 
     max-width:250px;
+
+}
+.hero-content{
+
+    text-align:center;
+
+}
+
+.hero-description{
+
+    max-width:100%;
+
+}
+
+.social-icons{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
 
 }
 
