@@ -462,6 +462,8 @@
 
     gap:6px;
 
+     min-width:100px;   /* Add this */
+    height:40px;   
     padding:8px 12px;
 
     font-size:12px;
@@ -491,7 +493,7 @@
 
     top:80px;
 
-    left:-75px;
+    left:-95px;
 
 }
 
@@ -507,7 +509,7 @@
 
     top:80px;
 
-    right:-75px;
+    right:-95px;
 
 }
 
@@ -521,7 +523,7 @@
 
 .ai{
 
-    bottom:0px;
+    bottom:-30px;
 
     right:10px;
 
