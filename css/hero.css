@@ -400,8 +400,8 @@
 
 .image-wrapper{
 
-    width:240px;
-    height:240px;
+    width:min(230px,80vw);
+    aspect-ratio:1/1;
 
 }
 
@@ -544,8 +544,8 @@
 
 .image-wrapper{
 
-    width:220px;
-    height:220px;
+    width:min(190px,75vw);
+    aspect-ratio:1/1;
 
 }
 
