@@ -102,6 +102,7 @@ nav{
 .image-wrapper{
 
     width:min(230px,80vw);
+    height:auto;
 
     aspect-ratio:1/1;
 
@@ -223,6 +224,7 @@ section{
 
 .image-wrapper{
     width:min(190px,75vw);
+    height:auto;
 
     aspect-ratio:1/1;
 }
