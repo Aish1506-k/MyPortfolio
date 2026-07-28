@@ -454,18 +454,25 @@
 }
 .tech-badge{
 
+    position:absolute;
+
     display:flex;
+
+    align-items:center;
+
+    gap:6px;
 
     padding:8px 12px;
 
     font-size:12px;
 
-    gap:6px;
-
     border-radius:12px;
 
-}
+    white-space:nowrap;
 
+    z-index:3;
+
+}
 .tech-badge i{
 
     font-size:14px;
@@ -474,52 +481,51 @@
 
 .html{
 
-    top:10px;
+    top:-20px;
 
-    left:-8px;
+    left:-55px;
 
 }
 
 .css{
 
-    top:70px;
+    top:80px;
 
-    left:-18px;
+    left:-75px;
 
 }
 
 .js{
 
-    top:10px;
+    top:-20px;
 
-    right:-8px;
+    right:-55px;
 
 }
 
 .java{
 
-    top:70px;
-    bottom:auto;
+    top:80px;
 
-    right:-18px;
+    right:-75px;
 
 }
 
 .python{
 
-    bottom:55px;
+    bottom:20px;
 
-    left:-15px;
+    left:-70px;
 
 }
 
 .ai{
 
-    bottom:-12px;
+    bottom:0px;
 
-    left:50%;
+    right:10px;
 
-    transform:translateX(-50%);
+    transform:none;
 
 }
 
